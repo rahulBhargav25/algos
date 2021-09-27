@@ -1,6 +1,6 @@
 
 public class recurssionPileOfBoxes {
-	static int i =10;
+	static long i =10;
 	public static void main(String[] args) throws Exception {
 		recurssionPileOfBoxes rs = new recurssionPileOfBoxes();
 		
@@ -9,11 +9,11 @@ public class recurssionPileOfBoxes {
 
 	}
 	
-	public void cd(int i) throws Exception {
+	public void cd(long i) throws Exception {
 		System.out.println(i);
 		if(i<=0) {
 			
-			//cd(i-1);
+			cd(i-1);
 			
 		} else {
 			cd(i-1);
