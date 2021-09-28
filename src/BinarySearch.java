@@ -13,7 +13,7 @@ public class BinarySearch {
 		
 		//Binary search using recursion
 		int ans = recurrBinarySearch(arr, high, item);
-		System.out.println(ans + " is found at index "+findIndex(arr, ans));
+		System.out.println(ans + " is found at index "+findIndex(arr, ans) + " using recursion Binary search");
 		
 		
 		
@@ -23,7 +23,7 @@ public class BinarySearch {
 			int mid = (low+high)/2;
 			int guess = arr[mid];
 			if(guess==item) {
-				System.out.println("item found at "+mid+" the specified index");
+				System.out.println("item found at "+mid+" the specified index using while loop");
 				break;
 			}
 			else if(guess>item) {
@@ -33,7 +33,7 @@ public class BinarySearch {
 				low = mid+ 1;
 			}
 			else {
-				System.out.println("Item doesnt exist");
+				System.out.println("Item doesnt exist using while loop");
 			}
 		}
 
