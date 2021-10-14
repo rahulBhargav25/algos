@@ -20,11 +20,11 @@ public class QuickSort {
 		pivot = arr[low];
 		int i = low;
 		int j = high;
-		while(i<j) {
+		while(i<=j) {
 			do {
 				++i;
 				
-			} while(arr[i]<=pivot && j <= high); 
+			} while(arr[i]<=pivot && j < high); 
 			
 			do {
 				j--;
