@@ -10,7 +10,7 @@ public class BuyPlease {
 			    
 			String[] input = new String[4];
 			int a,b,x,y;
-			System.out.println("Enter");
+			
 			input = in.readLine().split(" ");
 			a=Integer.parseInt(input[0]);
 			b=Integer.parseInt(input[1]);
