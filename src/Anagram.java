@@ -19,6 +19,7 @@ public class Anagram {
 		for(int i=0;i<26;i++) {
 			if(count1[i]!=count2[i]) {
 				flag=0;
+				break;
 			}
 		}
 		if(flag==1) {
