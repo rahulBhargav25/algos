@@ -3,7 +3,7 @@ import java.util.Arrays;
 
 public class BinarySearchImpl {
     public static void main(String[] args) {
-        int[] arr = {2,543,5,323,5,43,2,46,45,65,67,34};
+        int[] arr = {5,2,3,1,4};
         Arrays.sort(arr);
         int start = 0;
         int end = arr.length-1;
@@ -12,10 +12,10 @@ public class BinarySearchImpl {
         int target = 5;
         int flag = 0;
         while(start<end+1) {
-            mid = start+end/2;
+            mid = (start+end)/2;
             if(arr[mid]==target) {
                 flag=1;
-                System.out.println("YES");
+                System.out.println(mid);
                 break;
             } else if(arr[mid]<target) {
                 start=mid+1;
