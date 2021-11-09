@@ -8,11 +8,24 @@ public class StackImplementation {
         String s4 = "))((";
         String s1 = "((()()";
         String s6 = "(((())";
-        isBalanced(s1);
-        isBalancedSecondEdition(s6);
+        String s7 = "))))((((";
+        //isBalanced(s7);
+        //isBalancedSecondEdition(s6);
+        //isBalancedSecondEdition(s6);
+        isSwap(s7);
 
     }
 
+/*
+* How many swap needed to balance question*/
+    public static void isSwap(String s) {
+        //Stack<Character> stk1 = new Stack<>();
+        Stack<Character> stk = isBalanced(s);
+        int n = stk.size();
+        System.out.println("Swaps needed " + ((n/2)+1)/2);
+    }
+/*
+* Customized Balanced equation*/
     public static void isBalancedSecondEdition(String s) {
         int n = s.length();
         char[] a = s.toCharArray();
@@ -22,9 +35,9 @@ public class StackImplementation {
             if(stk.empty()) {
                 stk.push(a[i]);
             } else {
-                if(stk.peek() == '(' && stk.peek() != a[i]) {
+                if(!stk.empty() && stk.peek() == '(' && stk.peek() != a[i]) {
                     stk.pop();
-                    if(stk.peek() == '(') {
+                    if(!stk.empty() && stk.peek() == '(') {
                         stk.pop();
                     } else {
                         stk.push('(');
@@ -41,8 +54,9 @@ public class StackImplementation {
             System.out.println("not balanced");
         }
     }
-
-    public static void isBalanced(String s1) {
+/*
+* Check whether this is balanced or not*/
+    public static Stack isBalanced(String s1) {
         int n = s1.length();
         char[] a = s1.toCharArray();
         Stack<Character> stk = new Stack<>();
@@ -59,10 +73,8 @@ public class StackImplementation {
             }
         }
 
-        if(stk.empty()) {
-            System.out.println("Balanced equation");
-        } else {
-            System.out.println("not balanced");
-        }
+        return stk;
+
+
     }
 }
